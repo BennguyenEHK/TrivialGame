@@ -222,18 +222,27 @@ public class ArenaGamePanel extends Pane {
 
     /** Move entities based on currently held keys. */
     private void updateEntities(long now) {
-        // P1 always uses WASD regardless of whose turn it is
-        p1Entity.update(
-            pressed.contains(KeyCode.W),
-            pressed.contains(KeyCode.S),
-            pressed.contains(KeyCode.A),
-            pressed.contains(KeyCode.D),
-            now
-        );
-
-        // P2 always uses arrow keys in two-player mode
-        if (twoPlayerMode && p2Entity != null) {
-            p2Entity.update(
+        if (twoPlayerMode) {
+            // Two-player: P1 uses WASD, P2 uses Arrow keys
+            p1Entity.update(
+                pressed.contains(KeyCode.W),
+                pressed.contains(KeyCode.S),
+                pressed.contains(KeyCode.A),
+                pressed.contains(KeyCode.D),
+                now
+            );
+            if (p2Entity != null) {
+                p2Entity.update(
+                    pressed.contains(KeyCode.UP),
+                    pressed.contains(KeyCode.DOWN),
+                    pressed.contains(KeyCode.LEFT),
+                    pressed.contains(KeyCode.RIGHT),
+                    now
+                );
+            }
+        } else {
+            // Single-player and Time Based: Arrow keys only
+            p1Entity.update(
                 pressed.contains(KeyCode.UP),
                 pressed.contains(KeyCode.DOWN),
                 pressed.contains(KeyCode.LEFT),
@@ -345,7 +354,7 @@ public class ArenaGamePanel extends Pane {
         // Instructions at top center of arena
         String instr = twoPlayerMode
             ? "P1: WASD  |  P2: ARROWS  ·  Reach the correct flag!"
-            : "WASD to move  ·  Reach the correct flag!";
+            : "ARROW KEYS to move  ·  Reach the correct flag!";
         gc.setFont(Font.font("Arial", FontWeight.BOLD, 10));
         gc.setFill(Color.web("#4ade80", 0.40));
         double textW = instr.length() * 5.5;

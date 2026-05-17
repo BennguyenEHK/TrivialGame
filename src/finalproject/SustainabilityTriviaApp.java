@@ -259,7 +259,7 @@ public class SustainabilityTriviaApp extends Application {
         // movement instructions at the top of the left panel
         String instrText = (currentGame instanceof TwoPlayerGame)
             ? "P1: WASD  |  P2: Arrow Keys\nNavigate to the correct flag — push to compete!"
-            : "WASD to move  —  Capture the correct flag!";
+            : "Arrow Keys to move  —  Capture the correct flag!";
         Label modeInstr = new Label(instrText);
         modeInstr.getStyleClass().add("arena-instruction");
         modeInstr.setWrapText(true);
