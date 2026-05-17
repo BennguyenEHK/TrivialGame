@@ -1,0 +1,10 @@
+bin/
+target/
+.claude/
+.vscode/
+run.bat
+ui.png
+bash.exe.stackdump
+docx_extract/
+*.docx
+*.stackdump

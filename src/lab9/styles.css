@@ -1,0 +1,476 @@
+/**
+ * styles.css
+ * All visual styling for the Sustainability Trivia Game.
+ * Loaded by SustainabilityTriviaApp at scene creation.
+ * Green theme to match the sustainability focus of the project.
+ *
+ * Author: Sefan Adinew
+ * Course: CISC230 - Object Oriented Design and Programming
+ * Semester: Spring 2026
+ */
+
+/* ============================================================
+   ROOT BACKGROUNDS — very dark forest green-black
+   ============================================================ */
+.welcome-root, .game-root, .leaderboard-root {
+    -fx-background-color: #071207;
+    -fx-font-family: "Arial";
+}
+
+/* ============================================================
+   TITLE BANNER — dark gradient with bottom glow border
+   ============================================================ */
+.title-banner {
+    -fx-background-color: linear-gradient(to bottom, #052505, #0d3d0d);
+    -fx-padding: 28 20 22 20;
+    -fx-border-color: transparent transparent #166534 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-effect: dropshadow(gaussian, #4ade8044, 18, 0.2, 0, 4);
+}
+
+/* ============================================================
+   TITLE TEXT
+   ============================================================ */
+.game-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4ade80;
+    -fx-font-family: "Georgia";
+    -fx-effect: dropshadow(gaussian, #4ade80, 18, 0.45, 0, 0);
+}
+
+.game-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #86efac;
+}
+
+.game-purpose {
+    -fx-font-size: 13px;
+    -fx-text-fill: #86efac;
+    -fx-wrap-text: true;
+}
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+.section-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4ade80;
+}
+
+/* ============================================================
+   NAME INPUT FIELDS
+   ============================================================ */
+.name-input {
+    -fx-font-size: 13px;
+    -fx-background-color: #0d1f0d;
+    -fx-text-fill: #e2f5e2;
+    -fx-border-color: #166534;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+}
+
+.name-input:focused {
+    -fx-border-color: #4ade80;
+    -fx-effect: dropshadow(gaussian, #4ade8066, 8, 0.2, 0, 0);
+}
+
+/* ============================================================
+   DIFFICULTY COMBO BOX
+   ============================================================ */
+.difficulty-combo {
+    -fx-font-size: 13px;
+    -fx-background-color: #0d1f0d;
+    -fx-text-fill: #e2f5e2;
+    -fx-border-color: #166534;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* difficulty combo — white text for selected value */
+.difficulty-combo > .combo-box-base > .label {
+    -fx-text-fill: white;
+}
+
+/* difficulty combo — dropdown list items */
+.difficulty-combo .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #0d2a0d;
+}
+
+.difficulty-combo .list-cell:hover,
+.difficulty-combo .list-cell:filled:hover {
+    -fx-background-color: #166534;
+    -fx-text-fill: white;
+}
+
+.difficulty-combo .list-cell:selected,
+.difficulty-combo .list-cell:filled:selected {
+    -fx-background-color: #15803d;
+    -fx-text-fill: white;
+}
+
+/* ============================================================
+   HINT / STATUS LABELS
+   ============================================================ */
+.hint-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #64748b;
+}
+
+/* ============================================================
+   MODE RADIO BUTTONS
+   ============================================================ */
+.mode-radio {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e2f5e2;
+}
+
+.mode-radio:selected {
+    -fx-text-fill: #4ade80;
+    -fx-font-weight: bold;
+}
+
+/* ============================================================
+   START BUTTON
+   ============================================================ */
+.start-button {
+    -fx-background-color: linear-gradient(to bottom, #16a34a, #15803d);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 11 35;
+    -fx-background-radius: 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #4ade8088, 14, 0.3, 0, 2);
+}
+
+.start-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #22c55e, #16a34a);
+    -fx-effect: dropshadow(gaussian, #4ade80bb, 20, 0.4, 0, 2);
+}
+
+/* ============================================================
+   ANSWER OPTION BUTTONS
+   ============================================================ */
+.option-button {
+    -fx-background-color: #0d2a0d;
+    -fx-border-color: #166534;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-text-fill: #e2f5e2;
+    -fx-alignment: center-left;
+    -fx-padding: 10 16;
+    -fx-cursor: hand;
+    -fx-wrap-text: true;
+}
+
+.option-button:hover {
+    -fx-background-color: #143d14;
+    -fx-border-color: #4ade80;
+    -fx-effect: dropshadow(gaussian, #4ade8055, 10, 0.2, 0, 0);
+}
+
+/* correct answer highlight */
+.option-correct {
+    -fx-background-color: #16a34a;
+    -fx-text-fill: white;
+    -fx-border-color: #4ade80;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, #4ade8099, 12, 0.35, 0, 0);
+}
+
+/* wrong answer highlight */
+.option-incorrect {
+    -fx-background-color: #991b1b;
+    -fx-text-fill: white;
+    -fx-border-color: #f87171;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, #f8717199, 12, 0.35, 0, 0);
+}
+
+/* ============================================================
+   NEXT QUESTION BUTTON
+   ============================================================ */
+.next-button {
+    -fx-background-color: #1d4ed8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 28;
+    -fx-background-radius: 18;
+    -fx-cursor: hand;
+}
+
+.next-button:hover {
+    -fx-background-color: #1e40af;
+    -fx-effect: dropshadow(gaussian, #60a5fa88, 12, 0.25, 0, 0);
+}
+
+/* ============================================================
+   PLAY AGAIN BUTTON
+   ============================================================ */
+.play-again-button {
+    -fx-background-color: #15803d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 28;
+    -fx-background-radius: 18;
+    -fx-cursor: hand;
+}
+
+.play-again-button:hover {
+    -fx-background-color: #166534;
+    -fx-effect: dropshadow(gaussian, #4ade8066, 10, 0.2, 0, 0);
+}
+
+/* ============================================================
+   HOME BUTTON
+   ============================================================ */
+.home-button {
+    -fx-background-color: #475569;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 28;
+    -fx-background-radius: 18;
+    -fx-cursor: hand;
+}
+
+.home-button:hover {
+    -fx-background-color: #334155;
+}
+
+/* ============================================================
+   TOP BAR — dark game HUD bar
+   ============================================================ */
+.top-bar {
+    -fx-background-color: #0a1f0a;
+    -fx-padding: 14 20;
+    -fx-border-color: transparent transparent #166534 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.player-turn-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4ade80;
+}
+
+.defender-label {
+    -fx-text-fill: #60a5fa;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+.score-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #86efac;
+}
+
+.progress-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+/* timer — gold by default */
+.timer-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fbbf24;
+    -fx-effect: dropshadow(gaussian, #fbbf2466, 8, 0.2, 0, 0);
+}
+
+/* timer — red when 5 seconds or fewer remain */
+.timer-urgent {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f87171;
+    -fx-effect: dropshadow(gaussian, #f8717188, 10, 0.25, 0, 0);
+}
+
+/* ============================================================
+   QUESTION TEXT
+   ============================================================ */
+.question-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e2f5e2;
+    -fx-font-family: "Georgia";
+    -fx-wrap-text: true;
+}
+
+/* ============================================================
+   BOTTOM FEEDBACK BAR
+   ============================================================ */
+.bottom-bar {
+    -fx-background-color: #0a1a0a;
+    -fx-border-color: #166534 transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+    -fx-padding: 12 20 18 20;
+}
+
+.feedback-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.feedback-correct   { -fx-text-fill: #4ade80; }
+.feedback-incorrect { -fx-text-fill: #f87171; }
+.feedback-timeout   { -fx-text-fill: #fb923c; }
+
+/* ============================================================
+   LEADERBOARD HEADER
+   ============================================================ */
+.leaderboard-header {
+    -fx-background-color: linear-gradient(to bottom, #052505, #0d3d0d);
+    -fx-padding: 24 20 18 20;
+    -fx-border-color: transparent transparent #166534 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.lb-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4ade80;
+    -fx-font-family: "Georgia";
+    -fx-effect: dropshadow(gaussian, #4ade80, 18, 0.45, 0, 0);
+}
+
+.lb-mode-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #86efac;
+}
+
+.winner-label {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fbbf24;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow(gaussian, #fbbf2466, 8, 0.2, 0, 0);
+}
+
+/* ============================================================
+   RANK ROWS
+   ============================================================ */
+.rank-row {
+    -fx-background-color: #0d2a0d;
+    -fx-border-color: #166534;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 18;
+}
+
+/* first place row — gold accent */
+.rank-first {
+    -fx-background-color: #1a3a00;
+    -fx-border-color: #fbbf24;
+    -fx-effect: dropshadow(gaussian, #fbbf2444, 10, 0.2, 0, 0);
+}
+
+.rank-name     { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #e2f5e2; }
+.rank-score    { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #4ade80; }
+.rank-accuracy { -fx-font-size: 12px; -fx-text-fill: #64748b; }
+
+/* ============================================================
+   SUSTAINABILITY FACT BOX
+   ============================================================ */
+.fact-box {
+    -fx-background-color: #071f2a;
+    -fx-border-color: #1e40af;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 14;
+    -fx-effect: dropshadow(gaussian, #60a5fa44, 10, 0.15, 0, 0);
+}
+
+.fact-header {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #60a5fa;
+}
+
+.fact-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #94a3b8;
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
+}
+
+/* ============================================================
+   ARENA / CAPTURE-THE-FLAG GAME SCREEN CLASSES (new)
+   ============================================================ */
+
+/* Dark side panel with subtle right border separator */
+.question-panel {
+    -fx-background-color: #0a1a0a;
+    -fx-border-color: transparent #166534 transparent transparent;
+    -fx-border-width: 0 2 0 0;
+}
+
+/* "Capture the flag" instruction text at top of left panel */
+.arena-instruction {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fbbf24;
+    -fx-background-color: #1a2e00;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+}
+
+/* Read-only answer options in the left panel — styled as mission log entries */
+.option-display-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e2f5e2;
+    -fx-background-color: #0d2a0d;
+    -fx-border-color: #166534;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+    -fx-wrap-text: true;
+}
+
+/* Highlight when correct answer is revealed */
+.option-display-correct {
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+    -fx-background-color: #15803d;
+    -fx-border-color: #4ade80;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #4ade8077, 10, 0.25, 0, 0);
+}
+
+/* Highlight when wrong answer is shown */
+.option-display-incorrect {
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+    -fx-background-color: #991b1b;
+    -fx-border-color: #f87171;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+    -fx-effect: dropshadow(gaussian, #f8717177, 10, 0.25, 0, 0);
+}
