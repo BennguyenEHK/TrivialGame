@@ -53,9 +53,17 @@ Project-instrucitonns.md   Assignment requirements
 
 ## Controls (Arena)
 
+**Single Player & Time Based**
+
+| Player | Move |
+|--------|------|
+| Player 1 | Arrow Keys (↑ ↓ ← →) |
+
+**Two Player**
+
 | Player | Move |
 |--------|------|
 | Player 1 | W A S D |
-| Player 2 | Arrow Keys |
+| Player 2 | Arrow Keys (↑ ↓ ← →) |
 
 Navigate your character to the flag labelled with your answer choice.
