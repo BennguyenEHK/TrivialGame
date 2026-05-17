@@ -8,7 +8,7 @@
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */
-package lab9;
+package finalproject;
 import java.util.ArrayList;
 import java.util.Collections;
 

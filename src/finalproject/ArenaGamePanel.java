@@ -14,7 +14,7 @@
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */
-package lab9;
+package finalproject;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
