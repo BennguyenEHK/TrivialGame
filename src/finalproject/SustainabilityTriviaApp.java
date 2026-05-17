@@ -57,7 +57,7 @@ public class SustainabilityTriviaApp extends Application {
     private Label[] optionLabels = new Label[4];   // A/B/C/D — display only, not clickable
     private Button  nextButton;
 
-    // per-question 15-second countdown — UNIQUE FEATURE
+    // per-question 20-second countdown (Two Player and Time Based only)
     private Timeline questionTimer;
     private int      questionSecondsLeft;
 
@@ -429,6 +429,13 @@ public class SustainabilityTriviaApp extends Application {
                 timerLabel.getStyleClass().add("timer-label");
             }
             // startQuestionTimer() is invoked by arenaPanel.onOverlayDismissed after 3s
+        } else if (currentGame instanceof SinglePlayerGame) {
+            // solo mode has no per-question timer
+            timerLabel.setText("⏱ --");
+            timerLabel.getStyleClass().removeAll("timer-urgent");
+            if (!timerLabel.getStyleClass().contains("timer-label")) {
+                timerLabel.getStyleClass().add("timer-label");
+            }
         } else {
             startQuestionTimer();
         }
@@ -490,10 +497,11 @@ public class SustainabilityTriviaApp extends Application {
     // TIMERS
     // ==========================================================================
 
-    // UNIQUE FEATURE: every question has a 15-second countdown
+    // 20-second per-question countdown for Two Player and Time Based modes
     // if it hits zero, we auto-submit with index -1 (always wrong) and zap the entity
     private void startQuestionTimer() {
-        questionSecondsLeft = 15;
+        if (currentGame instanceof SinglePlayerGame) return;
+        questionSecondsLeft = 20;
         timerLabel.setText("⏱ " + questionSecondsLeft + "s");
         timerLabel.getStyleClass().removeAll("timer-urgent");
         if (!timerLabel.getStyleClass().contains("timer-label")) {
@@ -516,7 +524,7 @@ public class SustainabilityTriviaApp extends Application {
             }
         }));
 
-        questionTimer.setCycleCount(15);
+        questionTimer.setCycleCount(20);
         questionTimer.play();
     }
 
