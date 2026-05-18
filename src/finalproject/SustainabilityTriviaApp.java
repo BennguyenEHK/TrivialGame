@@ -497,11 +497,12 @@ public class SustainabilityTriviaApp extends Application {
     // TIMERS
     // ==========================================================================
 
-    // 20-second per-question countdown for Two Player and Time Based modes
+    // per-question countdown for Two Player (30s) and Time Based (20s) modes
     // if it hits zero, we auto-submit with index -1 (always wrong) and zap the entity
     private void startQuestionTimer() {
         if (currentGame instanceof SinglePlayerGame) return;
-        questionSecondsLeft = 20;
+        int duration = (currentGame instanceof TwoPlayerGame) ? 30 : 20;
+        questionSecondsLeft = duration;
         timerLabel.setText("⏱ " + questionSecondsLeft + "s");
         timerLabel.getStyleClass().removeAll("timer-urgent");
         if (!timerLabel.getStyleClass().contains("timer-label")) {
@@ -524,7 +525,7 @@ public class SustainabilityTriviaApp extends Application {
             }
         }));
 
-        questionTimer.setCycleCount(20);
+        questionTimer.setCycleCount(duration);
         questionTimer.play();
     }
 

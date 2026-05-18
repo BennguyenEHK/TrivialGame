@@ -254,8 +254,8 @@ public class ArenaGamePanel extends Pane {
 
     /**
      * Push overlapping entities apart using center-to-center direction.
-     * Enhancement A: uses a fixed 8px push per entity (16px total separation),
-     * and spawns an expanding amber wave ring animation at the collision midpoint.
+     * Enhancement A: asymmetric push — attacker is repelled 3× harder (48 px) than the
+     * defender (16 px), plus an expanding amber wave ring animation at the collision midpoint.
      */
     private void resolveEntityCollision(long now) {
         if (p2Entity == null) return;
@@ -277,10 +277,15 @@ public class ArenaGamePanel extends Pane {
         double penetration = ArenaEntity.WIDTH - len;
         if (penetration <= 0) return;
 
-        // Enhancement A: fixed 8px push per entity gives a strong, visible 16px total separation
-        double push = 16.0;
-        p1Entity.pushBack(-(dx / len) * push, -(dy / len) * push);
-        p2Entity.pushBack( (dx / len) * push,  (dy / len) * push);
+        // Asymmetric push: defender repels the attacker 3x harder than they are pushed back.
+        // 3x chosen as the midpoint of the requested 2–4 range: visible enough to matter,
+        // not so large it feels unfair. activePlayerIdx 0 = p1 is attacker, 1 = p2 is attacker.
+        double attackerPush = 48.0;   // 3 × base (16)
+        double defenderPush = 16.0;
+        double ap = (activePlayerIdx == 0) ? attackerPush : defenderPush;
+        double dp = (activePlayerIdx == 0) ? defenderPush : attackerPush;
+        p1Entity.pushBack(-(dx / len) * ap, -(dy / len) * ap);
+        p2Entity.pushBack( (dx / len) * dp,  (dy / len) * dp);
 
         // Enhancement A: spawn wave only if previous wave has expired (or never started)
         if (collisionWaveStartTime < 0 || (now - collisionWaveStartTime) >= WAVE_TOTAL) {
