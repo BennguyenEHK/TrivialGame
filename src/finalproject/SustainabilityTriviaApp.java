@@ -57,7 +57,7 @@ public class SustainabilityTriviaApp extends Application {
     private Label[] optionLabels = new Label[4];   // A/B/C/D — display only, not clickable
     private Button  nextButton;
 
-    // per-question 20-second countdown (Two Player and Time Based only)
+    // per-question countdown timer (30s for Two Player, 20s for Time Based)
     private Timeline questionTimer;
     private int      questionSecondsLeft;
 
@@ -529,7 +529,7 @@ public class SustainabilityTriviaApp extends Application {
         questionTimer.play();
     }
 
-    // called when the 15-second question timer expires
+    // called when the question timer expires (30s for Two Player, 20s for Time Based)
     private void handleTimeOut() {
         arenaPanel.deactivate();
         arenaPanel.zapActiveEntity();  // entity gets zapped for not answering in time

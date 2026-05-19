@@ -80,6 +80,11 @@ public class QuestionBank {
             "A bike repair station is located between ASC and O'Shaughnessy Stadium.",
             true, "easy"));
 
+        allQuestions.add(new Question(
+            "Biking",
+            "St. Thomas provides secure indoor bike storage for students in Frey Residence Hall.",
+            true, "medium"));
+
         // ---- FOOD ----
         allQuestions.add(new Question(
             "Food",
