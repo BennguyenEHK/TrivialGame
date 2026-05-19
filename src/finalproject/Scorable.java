@@ -4,7 +4,7 @@
  * has to implement the same three methods.
  * Player implements this so all scoring goes through one consistent contract.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

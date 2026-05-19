@@ -4,7 +4,7 @@
  * to implement display() and getDisplayText().
  * Leaderboard implements this so rankings can always be displayed consistently.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

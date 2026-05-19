@@ -4,7 +4,7 @@
  * Instead of ending when questions run out, the question pool loops back around.
  * The game only ends when the global clock hits zero.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

@@ -4,7 +4,7 @@
  * the text, the answer choices, which one is correct, the topic, and difficulty.
  * I made two constructors — one for multiple choice and one for true/false.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

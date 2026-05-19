@@ -4,7 +4,7 @@
  * Handles movement physics, collision bounds, animation state, and Canvas rendering.
  * The entity is drawn programmatically using JavaFX GraphicsContext primitives.
  *
- * Author: Sefan Adinew
+ * Author: Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

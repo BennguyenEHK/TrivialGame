@@ -8,7 +8,7 @@
  * The four abstract methods force every subclass to define
  * their own version of the core game behavior.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

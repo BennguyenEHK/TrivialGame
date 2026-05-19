@@ -4,7 +4,7 @@
  * Implements Scorable so it's forced to have addScore, getScore, and resetScore.
  * I used a static counter to track how many players have been created total.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

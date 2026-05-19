@@ -4,7 +4,7 @@
  * Each flag corresponds to one answer option (A/B/C/D).
  * Rendered as a pole with a triangular banner using Canvas primitives.
  *
- * Author: Sefan Adinew
+ * Author: Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

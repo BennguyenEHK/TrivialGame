@@ -10,7 +10,7 @@
  * The TriviaGame reference (polymorphism) drives all three modes.
  * Only the game screen changes; Welcome and Leaderboard screens are unchanged.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

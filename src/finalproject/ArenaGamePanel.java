@@ -10,7 +10,7 @@
  *   - Detect when the active entity's center reaches a flag's capture radius.
  *   - Fire the onFlagCaptured callback (passed in from SustainabilityTriviaApp) with the answer index.
  *
- * Author: Sefan Adinew
+ * Author: Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

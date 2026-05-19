@@ -4,7 +4,7 @@
  * Questions come directly from the SSLP Sustainability Trivia Game 2026 document.
  * getGameQuestions() shuffles the pool so every game is different.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

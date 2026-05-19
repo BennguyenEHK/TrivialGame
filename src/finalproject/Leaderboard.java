@@ -4,7 +4,7 @@
  * Implements Displayable so it always has a way to show the results.
  * I used Collections.sort with an anonymous Comparator to sort descending.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

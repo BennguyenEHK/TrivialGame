@@ -4,7 +4,7 @@
  * Extends TriviaGame and fills in all four abstract methods
  * with the single-player version of the logic.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

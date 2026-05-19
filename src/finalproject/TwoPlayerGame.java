@@ -4,7 +4,7 @@
  * Each question goes to one player — they alternate back and forth.
  * Whoever has the highest score at the end wins.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */

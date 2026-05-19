@@ -4,7 +4,7 @@
  * Stores what they picked, whether it was right, and how long they took.
  * The points calculation lives here — difficulty sets the base, speed adds a bonus.
  *
- * Author: Sefan Adinew
+ * Author: Sefan Adinew, Minh Nguyen
  * Course: CISC230 - Object Oriented Design and Programming
  * Semester: Spring 2026
  */
